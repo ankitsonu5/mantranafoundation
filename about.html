@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | MANTRANA FOUNDATION</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding: 160px 0 80px;
+            background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+            color: white;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .about-section {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 25px;
+        }
+
+        .about-content strong {
+            color: var(--secondary);
+        }
+
+        .about-image-container {
+            width: 100%;
+        }
+
+        .about-real-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            object-fit: cover;
+            aspect-ratio: 4/3;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image-container {
+                order: -1;
+            }
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-sm);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">MANTRANA</span><span class="logo-dot">.</span>
+            </a>
+            <div class="nav-links">
+                <div class="lang-selector">
+                    <span class="lang-label"><i class="fa-solid fa-language"></i></span>
+                    <div id="google_translate_element"></div>
+                </div>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+                <a href="services.html" class="nav-link">Our Work</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="disclosure.html" class="nav-link">Disclosure</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="donate.html" class="btn btn-primary nav-donate-btn">Donate</a>
+            </div>
+            <button class="menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>About the Foundation</h1>
+            <p>A step towards entrepreneurship and self-reliance</p>
+        </div>
+    </header>
+
+    <section class="about-section bg-light">
+        <div class="container about-grid">
+            <div class="about-content">
+                <h2 style="color: var(--secondary); margin-bottom: 20px; font-size: 2rem;">Entrepreneurship & <span
+                        class="text-primary">Vision of Progress</span></h2>
+                <p><strong>MANTRANA FOUNDATION</strong> was established in 2025 with the objective of promoting
+                    entrepreneurship and self-reliance in society. As a non-governmental organization (NGO), we believe
+                    in connecting those people and groups to the mainstream who are left behind due to lack of resources
+                    or information.</p>
+                <p>The main goal of the foundation is to spread awareness about various government schemes such as
+                    Startup India, Digital MSME, and other Self-Help Group (SHG) programs. We ensure that an effective
+                    marketing system is developed for the products of small entrepreneurs and groups.</p>
+                <p>We are continuously working to provide a strong identity to MSMEs and self-help groups at national and
+                    global levels through both online and offline platforms. This includes product promotion, branding,
+                    exhibitions, modern digital marketing, and developing a complete network to connect directly with
+                    markets.</p>
+                <p><strong>MANTRANA FOUNDATION</strong> is not just an organization, but a commitment to public awareness
+                    and progress for society and enterprises.</p>
+            </div>
+            <div class="about-image-container">
+                <img src="about-image.png" alt="MANTRANA FOUNDATION Team working" class="about-real-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-text">MANTRANA</span><span class="logo-dot">.</span>
+                </a>
+                <p class="footer-desc">Committed to promoting entrepreneurship and self-reliance in society.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Work</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="disclosure.html">Public Disclosure</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4 class="footer-title">Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> mantranafoundation@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                    <li><i class="fas fa-map-marker-alt"></i> India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MANTRANA FOUNDATION. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'hi,bn,te,mr,ta,ur,gu,kn,or,ml,pa,as,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
