@@ -147,18 +147,21 @@ h6 {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    letter-spacing: 1px;
     display: flex;
-    align-items: baseline;
-    color: var(--secondary);
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
 }
 
-.logo-dot {
-    color: var(--primary);
-    font-size: 2.5rem;
-    line-height: 0;
+.logo-img {
+    height: 55px; /* Optimal height for navbar */
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -677,8 +680,13 @@ h6 {
 }
 
 .footer-logo {
-    color: var(--white);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.footer-logo .logo-img {
+    height: 70px; /* Slightly larger for footer */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
 }
 
 .footer-desc {
@@ -1228,4 +1236,316 @@ body {
 /* Also hide the first option in standard layout as a fallback */
 .goog-te-combo option:first-child {
     display: none;
+}
+
+/* --- Premium Vision Card --- */
+.vision-card {
+    position: relative;
+    margin-top: 50px;
+    padding: 50px 40px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(244, 123, 32, 0.03) 100%);
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(244, 123, 32, 0.1);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.vision-card::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 15rem;
+    font-family: 'Poppins', serif;
+    color: rgba(244, 123, 32, 0.05);
+    line-height: 1;
+    z-index: 0;
+}
+
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(244, 123, 32, 0.1);
+    border-color: rgba(244, 123, 32, 0.3);
+}
+
+.vision-header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.vision-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 15px rgba(244, 123, 32, 0.3);
+}
+
+.vision-title {
+    font-size: 1.8rem;
+    color: var(--secondary);
+    font-weight: 800;
+    margin: 0;
+}
+
+.vision-text {
+    position: relative;
+    z-index: 1;
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+    font-family: 'Mukta', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.vision-highlight {
+    color: var(--primary);
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding: 0 4px;
+}
+
+.vision-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(244, 123, 32, 0.15);
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.vision-footer {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vision-footer .line {
+    height: 2px;
+    flex: 1;
+    background: linear-gradient(to right, var(--primary), transparent);
+}
+
+/* --- Stats Section --- */
+.stats-section {
+    padding: 60px 0;
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* --- Core Values Section --- */
+.values-section {
+    padding: 100px 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(244, 123, 32, 0.1);
+    color: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.value-card h3 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.value-card p {
+    color: var(--text-muted);
+}
+
+/* --- Call to Action Section --- */
+.cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--secondary) 0%, #172554 100%);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-text {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* --- Team Section --- */
+.team-section {
+    padding: 100px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.team-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.team-img-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.team-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-name {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.team-role {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+}
+
+.team-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-dark);
+}
+
+.team-info-item i {
+    width: 25px;
+    color: var(--primary);
+}
+
+.team-details-img-section {
+    margin-top: 80px;
 }
