@@ -35,3 +35,46 @@ document.querySelectorAll(".nav-link").forEach((link) => {
     icon.classList.add("fa-bars");
   });
 });
+
+// --- Premium Translate Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const translateBtn = document.getElementById('translateBtn');
+    const premiumTranslate = document.getElementById('premiumTranslate');
+    const translateItems = document.querySelectorAll('.translate-item');
+
+    if (translateBtn && premiumTranslate) {
+        translateBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            premiumTranslate.classList.toggle('active');
+        });
+
+        // Close dropdown on outside click
+        document.addEventListener('click', (e) => {
+            if (premiumTranslate && !premiumTranslate.contains(e.target)) {
+                premiumTranslate.classList.remove('active');
+            }
+        });
+
+        // Handle Language Selection
+        translateItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                
+                // Remove active class from all
+                translateItems.forEach(i => i.classList.remove('active'));
+                // Add to current
+                this.classList.add('active');
+                
+                // Trigger Google Translate
+                const googleSelect = document.querySelector('.goog-te-combo');
+                if (googleSelect) {
+                    googleSelect.value = lang;
+                    googleSelect.dispatchEvent(new Event('change'));
+                }
+                
+                // Close dropdown
+                premiumTranslate.classList.remove('active');
+            });
+        });
+    }
+});
